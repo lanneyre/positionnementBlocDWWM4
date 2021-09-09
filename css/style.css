@@ -1,0 +1,85 @@
+body, html{
+    margin: 0;
+    padding: 0;
+}
+
+header, footer{
+    text-align: center;
+    font-size:50px;
+    background-color: darkgrey;
+    color: whitesmoke;
+    border-radius: 15px;
+}
+header{
+    margin-bottom: 20px;
+}
+main{
+    width: 100%;
+    margin: 0 auto;
+    padding: 15px;
+    box-sizing: border-box;
+    max-width: 1024px;
+}
+
+.slider > img{
+    width: 100%;
+    border-radius:5px;
+}
+.slider {
+    /* border: 1px solid darkgrey; */
+    /* padding: 5%; */
+    border-radius: 15px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.nav{
+    font-size:36px;
+    color: darkgrey;
+    position: absolute;
+    display:block;
+    top: 30%;
+}
+
+.flecheG{
+    left: 0;
+}
+.flecheD{
+    right: 0;
+}
+@media (min-width: 768px){
+    /* Si on veut utiliser Flex */
+    
+    main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    header, footer{
+        width: 100%;
+    }
+    .slider{
+        width: 48%;
+    }
+    .nav{
+        top:35%;
+    }
+    /* Si je veut utiliser Grid 
+    main{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 100px 1fr 100px;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+    header { grid-area: 1 / 1 / 2 / 3; }
+    #sectionGauche { 
+        grid-area: 2 / 1 / 3 / 2; 
+        padding-right: 15px;
+    }
+    #sectionDroite { 
+        grid-area: 2 / 2 / 3 / 3; 
+        padding-left: 15px;
+    }
+    footer { grid-area: 3 / 1 / 4 / 3; }*/
+}
